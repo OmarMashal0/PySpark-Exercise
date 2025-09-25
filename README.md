@@ -1,7 +1,6 @@
 # 🚀 PySpark Exercises & Tasks
 
 A collection of **hands-on PySpark exercises with solutions** to practice **big data processing** using Apache Spark.  
-Perfect for **students, data engineers, and interview prep**.
 
 ---
 
@@ -36,37 +35,27 @@ Datasets included:
    ```bash
    docker compose -f depi.yaml down
    ```
-
----
-
-## 📘 How to Use
-- Open exercises in **Jupyter Notebook** (`Task.ipynb`) and solve them.  
-- Compare with provided **solutions**.  
-- Run standalone `.py` scripts with Spark Submit:  
-  ```bash
-  docker exec -it pyspark-container spark-submit scripts/example.py
-  ```
-
+   
 ---
 
 ## 📊 Example Outputs
 **Average Salary**  
 ```
-6000.0
++----------+
+|avg_salary|
++----------+
+|    6000.0|
++----------+
 ```
 
-**Filter Employees Older than 28**  
+** Group by a the name column and find average salary **  
 ```
-+---+------+---+------+
-| id|  name|age|salary|
-+---+------+---+------+
-|  2|Mariam| 30|  6000|
-|  3|  Omar| 35|  7000|
-+---+------+---+------+
++------+----------+
+|  name|avg_salary|
++------+----------+
+|   Ali|    4000.0|
+|Mariam|    6750.0|
+|  Omar|    6750.0|
+|  Sara|    5000.0|
++------+----------+
 ```
-
----
-
-## 🤝 Contributing
-Contributions welcome 🎉  
-1. Fork → Branch → Commit → PR.  
